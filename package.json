@@ -1,5 +1,5 @@
 {
-  "name": "telegramjs",
+  "name": "@dreamcoder-uzbek/telegramjs",
   "version": "1.0.0",
   "description": "To integrate with the telegram bot from browser trough the project",
   "module": "dist/telegram.esm.js",
