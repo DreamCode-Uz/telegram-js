@@ -1,6 +1,6 @@
 {
   "name": "@dreamcoder-uzbek/telegramjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "To integrate with the telegram bot from browser trough the project",
   "module": "dist/telegram.esm.js",
   "browser": "dist/telegram.min.js",
