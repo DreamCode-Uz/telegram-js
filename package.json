@@ -1,0 +1,58 @@
+{
+  "name": "telegram-js",
+  "version": "1.0.0",
+  "description": "To integrate with the telegram bot from browser trough the project",
+  "module": "dist/telegram.esm.js",
+  "browser": "dist/telegram.min.js",
+  "node": "dist/telegram.cjs.js",
+  "main": "dist/telegram.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "test"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DreamCode-Uz/telegramJs.git"
+  },
+  "keywords": [
+    "telegram",
+    "telegram-bot",
+    "js",
+    "bot-message",
+    "rollup"
+  ],
+  "author": "Dilshod Fayzullayev <DarkProHub-Uz@yandex.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DreamCode-Uz/telegramJs/issues"
+  },
+  "homepage": "https://github.com/DreamCode-Uz/telegramJs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "eslint": "^8.23.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "prettier-eslint": "^15.0.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "browserslist": [
+    "maintained node versions",
+    "last 1 version",
+    "> 5%",
+    "not dead"
+  ]
+}

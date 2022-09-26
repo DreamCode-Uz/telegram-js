@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../dist/telegram.min.js"></script>
+</head>
+<body>
+<form id="form">
+  <input type="file" id="inputFile">
+</form>
+<script>
+  const form = document.getElementById("inputFile");
+
+  let tg = new telegram.init("5677910314:AAGLnjQTee-PofVw9hG5TfCQAhf_i-5NA7w", "709958895");
+
+  form.addEventListener("change", function () {
+    tg.sendVideoNote(this.files[0], `filename: \`${this.files[0].name}\``).then(data => {
+      console.log(data);
+    });
+  });
+
+  tg.sendContact("+998943110801", "Dilshod", "Fayzullayev");
+
+</script>
+</body>
+</html>
+<!--https://www.bigdatacloud.com/docs/api/free-reverse-geocode-to-city-api-->
+<!--https://www.findip.net/-->
