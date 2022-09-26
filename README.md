@@ -22,9 +22,9 @@
 
 
 <p align="center">
-<img src="https://img.shields.io/github/issues/DreamCode-Uz/telegramJs?style=flat-square"  alt="issues"/>
-<img src="https://img.shields.io/github/stars/DreamCode-Uz/telegramJs?style=flat-square" alt="stars"/>
-<img src="https://img.shields.io/github/license/DreamCode-Uz/telegramJs?style=flat-square" alt="license"/>
+<img src="https://img.shields.io/github/issues/DreamCode-Uz/telegram-js?style=flat-square"  alt="issues"/>
+<img src="https://img.shields.io/github/stars/DreamCode-Uz/telegram-js?style=flat-square" alt="stars"/>
+<img src="https://img.shields.io/github/license/DreamCode-Uz/telegram-js?style=flat-square" alt="license"/>
 </p>
 
 ## Table Of Contents
