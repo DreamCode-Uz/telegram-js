@@ -10,14 +10,14 @@
     Special library for Telegram bot to connect via browser
     <br/>
     <br/>
-    <a href="https://github.com/DreamCode-Uz/telegramJs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/DreamCode-Uz/telegram-js"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/DreamCode-Uz/telegramJs/examples">View Demo</a>
+    <a href="https://github.com/DreamCode-Uz/telegram-js">View Demo</a>
     .
-    <a href="https://github.com/DreamCode-Uz/telegramJs/issues">Report Bug</a>
+    <a href="https://github.com/DreamCode-Uz/telegram-js/issues">Report Bug</a>
     .
-    <a href="https://github.com/DreamCode-Uz/telegramJs/issues">Request Feature</a>
+    <a href="https://github.com/DreamCode-Uz/telegram-js/issues">Request Feature</a>
   </p>
 
 
