@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DreamCode-Uz/telegramJs.git"
+    "url": "git+https://github.com/DreamCode-Uz/telegram-js.git"
   },
   "keywords": [
     "telegram",
@@ -30,9 +30,9 @@
   "author": "Dilshod Fayzullayev <DarkProHub-Uz@yandex.ru>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DreamCode-Uz/telegramJs/issues"
+    "url": "https://github.com/DreamCode-Uz/telegram-js/issues"
   },
-  "homepage": "https://github.com/DreamCode-Uz/telegramJs#readme",
+  "homepage": "https://github.com/DreamCode-Uz/telegram-js#readme",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
