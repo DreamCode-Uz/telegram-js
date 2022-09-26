@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/DreamCode-Uz/telegramJs">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/DreamCode-Uz/telegram-js/main/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Telegram JS</h3>
