@@ -39,7 +39,7 @@ class Init {
 
   sendMessage (text, replyMessageId, protectContent = false, disableNotification = false) {
     const v = `${replyMessageId ? "&reply_to_message_id=" + replyMessageId : ""}&protect_content=${protectContent}&disable_notification=${disableNotification}`;
-    return config(this.botToken, `${SEND_MESSAGE}?text=${text}&chat_id=${this.chatId}${v}&parse_mode=${this.parseMode}`);
+    return config(this.botToken, `${SEND_MESSAGE}?text=${encodeURIComponent(text)}&chat_id=${this.chatId}${v}&parse_mode=${this.parseMode}`);
   }
 
   sendPoll (question, options = [], correctOptionId, isAnonymous = false, explanation, type = "regular", replyMessageId, disableNotification = false, protectContent = false) {
@@ -146,7 +146,6 @@ const fileConfig = (chat_id, fileType, file, caption, parseMode, disable_notific
 };
 
 const config = (botToken, url, options = {}) => {
-  console.log(options);
   return new Promise((resolve, reject) => fetch(`${BASE_URL + botToken + url}`, options).then(resp => resolve(resp.json())).catch(error => reject(error)));
 };
 
