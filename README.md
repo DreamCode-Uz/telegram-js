@@ -45,7 +45,7 @@ future. You may also suggest changes by forking this repo and creating a pull re
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-## Add to project
+## Add to project for browser
 
 ```html
 
