@@ -51,7 +51,7 @@ yarn add @dreamcoder-uzbek/telegramjs
 https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
 
-```http request
+```
 https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
 
