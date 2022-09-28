@@ -26,6 +26,7 @@
 <img src="https://img.shields.io/github/stars/DreamCode-Uz/telegram-js?style=flat-square" alt="stars"/>
 <img src="https://img.shields.io/github/license/DreamCode-Uz/telegram-js?style=flat-square" alt="license"/>
 <img src="https://data.jsdelivr.com/v1/package/npm/@dreamcoder-uzbek/telegramjs/badge" alt="jsDeliver"/>
+<img src="https://img.shields.io/npm/v/@dreamcoder-uzbek/telegramjs" alt="npm"/>
 </p>
 
 [![NPM](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs.png)](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs/)
