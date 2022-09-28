@@ -2,29 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
-  <script src="../dist/telegram.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Telegram-Js Example</title>
+  <!-- TELEGRAM-JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js"></script>
 </head>
 <body>
-<form id="form">
-  <input type="file" id="inputFile">
-</form>
+
 <script>
-  const inputFile = document.getElementById("inputFile");
 
-  let tg = new telegram.init("5677910314:AAGLnjQTee-PofVw9hG5TfCQAhf_i-5NA7w", "709958895");
+  const tg = new telegram.init("Your telegram bot token", "chatId or @channelusername");
 
-  inputFile.addEventListener("change", function (e) {
-    tg.sendAnimation(e.target.files[0]);
-  });
+  tg.sendMessage("Telegram first send message");
 
-  // tg.sendMessage("main\\.js").then(r=> console.log(r));
-
-  setTimeout(() => {
-    console.clear();
-    tg.sendMessage(tg.dotIgnore("main.js\njs")).then(d => console.log(d)).catch(r => console.log(r));
-
-  }, 0);
 </script>
 </body>
 </html>

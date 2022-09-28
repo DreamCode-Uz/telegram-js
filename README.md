@@ -25,10 +25,10 @@
 <img src="https://img.shields.io/github/issues/DreamCode-Uz/telegram-js?style=flat-square"  alt="issues"/>
 <img src="https://img.shields.io/github/stars/DreamCode-Uz/telegram-js?style=flat-square" alt="stars"/>
 <img src="https://img.shields.io/github/license/DreamCode-Uz/telegram-js?style=flat-square" alt="license"/>
+<img src="https://data.jsdelivr.com/v1/package/npm/@dreamcoder-uzbek/telegramjs/badge" alt="jsDeliver"/>
 </p>
 
 [![NPM](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs.png)](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs/)
-
 ## About The Project
 
 This project was created to facilitate communication with Telegram using javascript
@@ -47,6 +47,7 @@ yarn add @dreamcoder-uzbek/telegramjs
 
 ## Add to project via CDN link
 
+- [jsDeliver](https://www.jsdelivr.com/package/npm/@dreamcoder-uzbek/telegramjs)
 ```
 https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
@@ -61,7 +62,7 @@ https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 
 <html lang="en">
 <head>
-  <title>Telegram Js</title>
+  <title>Telegram Js | Connection example</title>
   <script src="dist/telegram.min.js"></script>
 </head>
 <body>
