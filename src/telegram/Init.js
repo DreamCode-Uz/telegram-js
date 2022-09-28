@@ -15,20 +15,41 @@ class Init {
   chatId;
   parseMode;
 
+  /**
+   * Basic data constructor
+   * @author Dilshod Fayzullayev <DarkProHub-Uz@yandex.ru>
+   * @constructor
+   * @param {String} botToken - The target HTML table
+   * @param {String} chatId - Telegram botId or @channelusername
+   * @param {String} parseMode - The format of the text being sent
+   */
   constructor (botToken, chatId, parseMode = MARKDOWN_V2) {
     this.botToken = botToken;
     this.chatId = chatId;
     this.parseMode = parseMode;
   }
 
+  /**
+   * Return information about the bot itself
+   * @return {Promise}
+   *  */
   getMe () {
     return config(this.botToken, GET_ME);
   }
 
+  /**
+   * Return information about the bot itself
+   * @param {String} fileId
+   * @return {Promise}
+   *  */
   getFile (fileId) {
     return config(this.botToken, `${GET_FILE}?file_id=${fileId}`);
   }
 
+  /**
+   * @param {String} filePath
+   * @return {String} - url link
+   * */
   downloadUrl (filePath) {
     return `https://api.telegram.org/file/bot${this.botToken}/${filePath}`;
   }
@@ -37,6 +58,13 @@ class Init {
     return config(this.botToken, GET_UPDATES);
   }
 
+  /**
+   * @param {String} text - Mandatory value for sending a message to Telegram
+   * @param {String} replyMessageId - Optional
+   * @param {boolean} protectContent - Optional(default=false)
+   * @param {boolean} disableNotification  - Optional(default=false)
+   * @return {Promise}
+   * */
   sendMessage (text, replyMessageId, protectContent = false, disableNotification = false) {
     const v = `${replyMessageId ? "&reply_to_message_id=" + replyMessageId : ""}&protect_content=${protectContent}&disable_notification=${disableNotification}`;
     return config(this.botToken, `${SEND_MESSAGE}?text=${encodeURIComponent(text)}&chat_id=${this.chatId}${v}&parse_mode=${this.parseMode}`);
@@ -124,10 +152,28 @@ class Init {
     });
   }
 
+  /**
+   * @param {String} latitude - required
+   * @param {String} longitude - required
+   * @param {String} horizontal_accuracy - Optional
+   * @param {String} reply_to_message_id - Optional
+   * @param {boolean} protect_content - Optional(default=false)
+   * @param {boolean} disable_notification  - Optional(default=false)
+   * @return {Promise}
+   * */
   sendLocation (latitude, longitude, horizontal_accuracy, disable_notification = false, protect_content = false, reply_to_message_id) {
     return config(this.botToken, `${SEND_LOCATION}?chat_id=${this.chatId}&parse_mode=${this.parseMode}${protect_content ? "&protect_content=" + protect_content : ""}${latitude ? "&latitude=" + latitude : ""}${longitude ? "&longitude=" + longitude : ""}${horizontal_accuracy ? "&horizontal_accuracy=" + horizontal_accuracy : ""}${disable_notification ? "&disable_notification=" + disable_notification : ""}${reply_to_message_id ? "&reply_to_message_id=" + reply_to_message_id : ""}`);
   }
 
+  /**
+   * @param {String} phone_number - required
+   * @param {String} first_name - required
+   * @param {String} last_name - Optional
+   * @param {String} reply_to_message_id - Optional
+   * @param {boolean} protect_content - Optional(default=false)
+   * @param {boolean} disable_notification  - Optional(default=false)
+   * @return {Promise}
+   * */
   sendContact (phone_number, first_name, last_name, disable_notification = false, protect_content = false, reply_to_message_id) {
     return config(this.botToken, `${SEND_CONTACT}?chat_id=${this.chatId}${phone_number ? "&phone_number=" + phone_number : ""}${first_name ? "&first_name=" + first_name : ""}${disable_notification ? "&disable_notification=" + disable_notification : ""}${protect_content ? "&protect_content=" + protect_content : ""}${reply_to_message_id ? "&reply_to_message_id=" + reply_to_message_id : ""}`);
   }

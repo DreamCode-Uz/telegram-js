@@ -15,9 +15,7 @@
   let tg = new telegram.init("5677910314:AAGLnjQTee-PofVw9hG5TfCQAhf_i-5NA7w", "709958895");
 
   form.addEventListener("change", function () {
-    tg.sendVideoNote(this.files[0], `filename: \`${this.files[0].name}\``).then(data => {
-      console.log(data);
-    });
+    //
   });
 
   tg.sendContact("+998943110801", "Dilshod", "Fayzullayev");
