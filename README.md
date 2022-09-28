@@ -27,6 +27,8 @@
 <img src="https://img.shields.io/github/license/DreamCode-Uz/telegram-js?style=flat-square" alt="license"/>
 </p>
 
+[![NPM](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs.png)](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs/)
+
 ## About The Project
 
 ![Screen Shot](images/screenshot.png)
