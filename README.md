@@ -31,21 +31,27 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+This project was created to facilitate communication with Telegram using javascript
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I
-created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+## Add for Node js project(ReactJs)
 
-Here's why:
+`via npm`
+```npm
+npm install @dreamcoder-uzbek/telegramjs
+```
 
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+`via yarn`
+```yarn
+yarn add @dreamcoder-uzbek/telegramjs
+```
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near
-future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+```http request
+https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.1/dist/telegram.min.js
+```
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+```http request
+https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.1/dist/telegram.min.js
+```
 
 ## Add to project for browser
 
