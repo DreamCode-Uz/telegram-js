@@ -35,22 +35,24 @@ This project was created to facilitate communication with Telegram using javascr
 
 ## Add for Node js project(ReactJs)
 
-`via npm`
+- `npm`
 ```npm
 npm install @dreamcoder-uzbek/telegramjs
 ```
 
-`via yarn`
+- `yarn`
 ```yarn
 yarn add @dreamcoder-uzbek/telegramjs
 ```
 
-```http request
-https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.1/dist/telegram.min.js
+## Add to project via CDN link
+
+```
+https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
 
 ```http request
-https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.1/dist/telegram.min.js
+https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
 
 ## Add to project for browser
@@ -80,7 +82,7 @@ First of all, a special object is created to use the library.
 it will be possible to connect to the library using the `telegram` keyword
 
 ```javascript
-new telegram.init(botToken, chatId, parseMode);
+const connected = new telegram.init(botToken, chatId, parseMode);
 ```
 
 | Keyword     | required | default      |
