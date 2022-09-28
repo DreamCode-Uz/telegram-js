@@ -10,16 +10,21 @@
   <input type="file" id="inputFile">
 </form>
 <script>
-  const form = document.getElementById("inputFile");
+  const inputFile = document.getElementById("inputFile");
 
   let tg = new telegram.init("5677910314:AAGLnjQTee-PofVw9hG5TfCQAhf_i-5NA7w", "709958895");
 
-  form.addEventListener("change", function () {
-    //
+  inputFile.addEventListener("change", function (e) {
+    tg.sendAnimation(e.target.files[0]);
   });
 
-  tg.sendContact("+998943110801", "Dilshod", "Fayzullayev");
+  // tg.sendMessage("main\\.js").then(r=> console.log(r));
 
+  setTimeout(() => {
+    console.clear();
+    tg.sendMessage(tg.dotIgnore("main.js\njs")).then(d => console.log(d)).catch(r => console.log(r));
+
+  }, 0);
 </script>
 </body>
 </html>
