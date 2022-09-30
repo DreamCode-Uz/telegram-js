@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/DreamCode-Uz/telegramJs">
+  <a href="https://github.com/DreamCode-Uz/telegram-js">
     <img src="https://raw.githubusercontent.com/DreamCode-Uz/telegram-js/main/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -26,7 +26,8 @@
 <img src="https://img.shields.io/github/stars/DreamCode-Uz/telegram-js?style=flat-square" alt="stars"/>
 <img src="https://img.shields.io/github/license/DreamCode-Uz/telegram-js?style=flat-square" alt="license"/>
 <img src="https://data.jsdelivr.com/v1/package/npm/@dreamcoder-uzbek/telegramjs/badge" alt="jsDeliver"/>
-<img src="https://img.shields.io/npm/v/@dreamcoder-uzbek/telegramjs" alt="npm"/>
+<img src="https://img.shields.io/npm/v/@dreamcoder-uzbek/telegramjs" alt="npm version"/>
+<img src="https://img.shields.io/npm/dt/@dreamcoder-uzbek/telegramjs" alt="npm download"/>
 </p>
 
 [![NPM](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs.png)](https://nodei.co/npm/@dreamcoder-uzbek/telegramjs/)
@@ -34,7 +35,7 @@
 
 This project was created to facilitate communication with Telegram using javascript
 
-## Add for Node js project(ReactJs)
+## Add for Node js project(`ReactJs`)
 
 - `npm`
 ```npm
