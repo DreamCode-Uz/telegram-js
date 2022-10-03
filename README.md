@@ -51,11 +51,11 @@ yarn add @dreamcoder-uzbek/telegramjs
 
 - [jsDeliver](https://www.jsdelivr.com/package/npm/@dreamcoder-uzbek/telegramjs)
 ```bash
-https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
+https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.5/dist/telegram.min.js
 ```
 
 ```bash
-https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
+https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.5/dist/telegram.min.js
 ```
 
 ## Add to project for browser
