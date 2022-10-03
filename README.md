@@ -50,11 +50,11 @@ yarn add @dreamcoder-uzbek/telegramjs
 ## Add to project via CDN link
 
 - [jsDeliver](https://www.jsdelivr.com/package/npm/@dreamcoder-uzbek/telegramjs)
-```http request
+```bash
 https://cdn.jsdelivr.net/npm/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
 
-```http request
+```bash
 https://unpkg.com/@dreamcoder-uzbek/telegramjs@1.2.4/dist/telegram.min.js
 ```
 
