@@ -1,14 +1,46 @@
+/**************************************************************************
+ *
+ @license MIT License
+
+ @Copyright(c) 2022 Dilshodbek Fayzullayev
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ *
+ *  */
+
 import {
-  BASE_URL, GET_FILE,
+  BASE_URL,
+  GET_FILE,
   GET_ME,
-  GET_UPDATES,
-  MARKDOWN_V2, SEND_ANIMATION, SEND_AUDIO, SEND_CONTACT,
-  SEND_DICE, SEND_DOCUMENT, SEND_LOCATION,
+  GET_UPDATES, MARKDOWN,
+  SEND_ANIMATION,
+  SEND_AUDIO,
+  SEND_CONTACT,
+  SEND_DICE,
+  SEND_DOCUMENT,
+  SEND_LOCATION,
   SEND_MESSAGE,
   SEND_PHOTO,
   SEND_POLL,
-  SEND_VIDEO, SEND_VIDEO_NOTE
-} from "./actions";
+  SEND_VIDEO,
+  SEND_VIDEO_NOTE
+} from "./TelegramAction";
 
 /** @class */
 class Init {
@@ -26,7 +58,7 @@ class Init {
    * @param {String} botToken
    * @param {String} chatId - Telegram botId or @channelusername
    */
-  constructor (botToken, chatId, parseMode = MARKDOWN_V2) {
+  constructor (botToken, chatId, parseMode = MARKDOWN) {
     this.botToken = botToken;
     this.chatId = chatId;
     this.parseMode = parseMode;
@@ -68,8 +100,6 @@ class Init {
    * @return {Promise}
    * */
   sendMessage (text, replyMessageId, protectContent = false, disableNotification = false) {
-    // const v = `${replyMessageId ? "&reply_to_message_id=" + replyMessageId : ""}&protect_content=${protectContent}&disable_notification=${disableNotification}`;
-    // return config(this.botToken, `${SEND_MESSAGE}?text=${encodeURIComponent(text)}&chat_id=${this.chatId}${v}&parse_mode=${this.parseMode}`);
     return config(this.botToken, SEND_MESSAGE, {
       method: "POST",
       headers: {
@@ -77,8 +107,9 @@ class Init {
       },
       body: JSON.stringify({
         chat_id: this.chatId,
-        text: text ? text: "",
+        text: text ? text : "",
         protect_content: protectContent,
+        reply_to_message_id: replyMessageId ? "" : replyMessageId,
         disable_notification: disableNotification,
         parse_mode: this.parseMode
       })
@@ -130,12 +161,16 @@ class Init {
    * @return {Promise}
    * */
   sendPhoto (photo, caption, disable_notification = false, protect_content = false, reply_to_message_id) {
-    const formData = fileConfig(this.chatId, "photo", photo, caption, this.parseMode, disable_notification, protect_content, reply_to_message_id);
-    return config(this.botToken, SEND_PHOTO, {
-      method: "POST",
-      body: formData,
-      redirect: "follow"
-    });
+    if (photo) {
+      const formData = fileConfig(this.chatId, "photo", photo, caption, this.parseMode, disable_notification, protect_content, reply_to_message_id);
+      return config(this.botToken, SEND_PHOTO, {
+        method: "POST",
+        body: formData,
+        redirect: "follow"
+      });
+    } else {
+      throw new Error("photo is empty");
+    }
   }
 
   /**
@@ -144,12 +179,16 @@ class Init {
    * @return {Promise}
    * */
   sendVideo (video, caption, disable_notification = false, protect_content = false, reply_to_message_id) {
-    const formData = fileConfig(this.chatId, "video", video, caption, this.parseMode, disable_notification, protect_content, reply_to_message_id);
-    return config(this.botToken, SEND_VIDEO, {
-      method: "POST",
-      body: formData,
-      redirect: "follow"
-    });
+    if (video) {
+      const formData = fileConfig(this.chatId, "video", video, caption, this.parseMode, disable_notification, protect_content, reply_to_message_id);
+      return config(this.botToken, SEND_VIDEO, {
+        method: "POST",
+        body: formData,
+        redirect: "follow"
+      });
+    } else {
+      throw new Error("Video is empty");
+    }
   }
 
   /**
@@ -158,12 +197,16 @@ class Init {
    * @return {Promise}
    * */
   sendAudio (audio, caption, disable_notification = false, protect_content = false, reply_to_message_id) {
-    const formData = fileConfig(this.chatId, "audio", audio, caption, this.parseMode, disable_notification, protect_content, reply_to_message_id);
-    return config(this.botToken, SEND_AUDIO, {
-      method: "POST",
-      body: formData,
-      redirect: "follow"
-    });
+    if (audio) {
+      const formData = fileConfig(this.chatId, "audio", audio, caption, this.parseMode, disable_notification, protect_content, reply_to_message_id);
+      return config(this.botToken, SEND_AUDIO, {
+        method: "POST",
+        body: formData,
+        redirect: "follow"
+      });
+    } else {
+      throw new Error("Audio is empty");
+    }
   }
 
   /**
@@ -230,7 +273,7 @@ class Init {
    * @return {string}
    * @param text
    * */
-  dotIgnore (text = "") {
+  mdIgnore (text = "") {
     return text.replaceAll(".", "\\.");
   }
 }

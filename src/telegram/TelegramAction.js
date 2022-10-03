@@ -1,5 +1,5 @@
 export const BASE_URL = "https://api.telegram.org/bot";
-export const MARKDOWN_V2 = "MarkdownV2";
+export const MARKDOWN = "Markdown";
 export const GET_ME = "/getMe";
 export const GET_UPDATES = "/getUpdates";
 export const GET_FILE = "/getFile";
